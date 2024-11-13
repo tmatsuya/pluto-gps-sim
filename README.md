@@ -41,7 +41,7 @@ The new way to get ephemeris data is as follows:
 Register an account with https://urs.earthdata.nasa.gov/ (There is no way around this step).
 
 Create a file called .netrc with the following format.
-machine urs.earthdata.nasa.gov login <username> password <password> where <username> and <password> are the values you set when you created your Earthdata login account. Don't forget to sudo chmod 004 .netrc so that no one can read your file and get your username and password.
+machine urs.earthdata.nasa.gov login <username> password <password> where <username> and <password> are the values you set when you created your Earthdata login account. Don't forget to sudo chmod 400 .netrc so that no one can read your file and get your username and password.
 
 You can automate with the process with following script.
 
