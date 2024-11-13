@@ -51,10 +51,14 @@ day=$(date +%j)
 year=$(date +%Y)
 yr=$(date +%y)
 
-curl -c /tmp/cookie -n -L -o "brdc""$day""0.$yr""n.Z" "https://cddis.gsfc.nasa.gov/archive/gnss/data/daily/$year""/brdc/brdc""$day""0.$yr""n.Z"
+echo $day
+echo $year
+echo $yr
 
-uncompress "brdc""$day""0.$yr""n.Z"
-echo "brdc""$day""0.$yr""n.Z"
+curl -c /tmp/cookie -n -L -o "brdc""$day""0.$yr""n.gz" "https://cddis.nasa.gov/archive/gnss/data/daily/$year""/brdc/brdc""$day""0.$yr""n.gz"
+
+uncompress "brdc""$day""0.$yr""n.gz"
+echo "brdc""$day""0.$yr""n.gz"
 ```
 
 The .netrc file along with the -n flag allows curl to automatically authenticate when attempting to retrieve the file.
