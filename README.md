@@ -88,19 +88,22 @@ $ sudo apt-get install libaio-dev libusb-1.0-0-dev libserialport-dev libxml2-dev
 Then build in this order:
 
 ```
-$ git clone https://github.com/analogdevicesinc/libiio.git
-$ cd libiio
-$ cmake ./
-$ make
-$ sudo make install
+ sudo apt install -y cmake libusb-1.0-0-dev libavahi-client-dev libxml2-dev libaio-dev flex bison
+ cd
+ git clone https://github.com/analogdevicesinc/libiio.git
+ cd libiio
+ cmake ./
+ make
+ sudo make install
 ```
 
 ```
-$ git clone https://github.com/analogdevicesinc/libad9361-iio.git
-$ cd libad9361-iio
-$ cmake ./
-$ make
-$ sudo make install
+ cd
+ git clone https://github.com/analogdevicesinc/libad9361-iio.git
+ cd libad9361-iio
+ cmake ./
+ make
+ sudo make install
 ```
 
 #### Building under Linux with GCC
